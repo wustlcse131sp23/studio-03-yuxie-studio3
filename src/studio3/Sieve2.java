@@ -11,15 +11,18 @@ public class Sieve2 {
 
 		boolean var[] = new boolean[n];
 
+		
+		// Firstly, full the boolean array with true
 		for(int j = 2; j < n; j++) {
 			var[j] = true;
 		}
 		
+		// Exclude any Composite number, change its value to false
+		// Starting from 4, to check if there any Composite number
+		// Checking indice: 2*2，2*3，2*4..2*20..3*3, 3*4....
 		for (int index = 2 ; index < n; index++) {
-			for (int i =index ; i * index  < n ; i++) {
+			for (int i = index ; i * index  < n ; i++) {
 				var[i*index] = false;
-
-
 			}
 		}
 		
@@ -29,9 +32,6 @@ public class Sieve2 {
 
 			}
 		}
-
-
-
 
 
 	}
